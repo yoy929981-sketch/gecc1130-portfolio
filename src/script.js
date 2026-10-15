@@ -20,6 +20,7 @@
     });
   }
 
+  /* Smooth scroll for browsers that need help + focus target for a11y */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       var id = anchor.getAttribute("href");

@@ -182,17 +182,49 @@ body {
 
 /* Hero */
 .hero {
-  padding: 4rem 0 3.5rem;
-  background:
-    linear-gradient(165deg, var(--accent-soft) 0%, var(--cream) 45%, var(--cream) 100%);
+  position: relative;
+  isolation: isolate;
+  padding: 4.5rem 0 4rem;
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  min-height: 22rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("images/hero-city.svg");
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      165deg,
+      rgba(20, 61, 61, 0.82) 0%,
+      rgba(30, 90, 90, 0.78) 45%,
+      rgba(26, 47, 53, 0.88) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--teal);
+  color: #b8e0dc;
   text-transform: none;
   margin: 0 0 0.75rem;
 }
@@ -202,35 +234,137 @@ body {
   font-size: clamp(1.75rem, 4vw, 2.35rem);
   font-weight: 700;
   line-height: 1.35;
-  color: var(--ink);
+  color: #fffcf7;
   margin: 0 0 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .hero-name {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--danger-hint);
+  color: #f0d5b8;
   margin: 0 0 0.35rem;
 }
 
 .hero-meta {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: rgba(255, 252, 247, 0.78);
   margin: 0 0 1.25rem;
 }
 
 .hero-identity {
   font-size: 1.05rem;
-  color: var(--ink-soft);
-  border-left: 3px solid var(--accent);
+  color: rgba(255, 252, 247, 0.92);
+  border-left: 3px solid #7ec8c0;
   padding-left: 1rem;
   margin: 0 0 1.25rem;
 }
 
 .fill-hint {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: rgba(255, 252, 247, 0.65);
   margin: 0;
+}
+
+/* Goal card images */
+.goal-media {
+  margin: 0;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+
+.goal-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.goal-card > .goal-header,
+.goal-card > .smart-list,
+.goal-card > .link-box,
+.goal-card > .blank-label,
+.goal-card > .blank-box {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.goal-card > .goal-header {
+  margin-top: 1.1rem;
+}
+
+.goal-card > .blank-box:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.goal-card > .blank-label {
+  margin-top: 0.35rem;
+}
+
+/* Visual strips */
+.section-visual {
+  padding: 0;
+  background: var(--paper);
+}
+
+.visual-strip {
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.visual-strip img {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.visual-strip figcaption,
+.inline-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.75rem 1.25rem 1.25rem;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.inline-figure {
+  margin: 0 0 1.75rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.inline-figure img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer-credits {
+  margin-top: 0.75rem !important;
+  font-size: 0.85rem;
+  opacity: 0.92;
+}
+
+.footer-credits a {
+  color: #b8e0dc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-credits a:hover,
+.footer-credits a:focus-visible {
+  color: #fff;
 }
 
 /* Panels & cards */
@@ -341,11 +475,12 @@ body {
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.35rem 1.25rem;
+  padding: 0;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  overflow: hidden;
 }
 
 .goal-header {
@@ -627,5 +762,42 @@ body {
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  .hero-bg,
+  .hero-overlay,
+  .goal-media,
+  .section-visual,
+  .inline-figure {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 1.5rem 0;
+    background: #fff !important;
+  }
+
+  .hero h1,
+  .eyebrow,
+  .hero-name,
+  .hero-meta,
+  .hero-identity,
+  .fill-hint {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .hero-identity {
+    border-left-color: #333;
+  }
+
+  .goal-card > .goal-header,
+  .goal-card > .smart-list,
+  .goal-card > .link-box,
+  .goal-card > .blank-label,
+  .goal-card > .blank-box {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 }
