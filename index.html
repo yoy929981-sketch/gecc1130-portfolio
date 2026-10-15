@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="GECC1130 反思習作｜我的大學路：智慧生活與公民實踐" />
+  <title>我的大學路｜智慧生活與公民實踐 — GECC1130</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+/* GECC1130 Reflective Portfolio — calm academic + civic */
+
+:root {
+  --ink: #1a2f35;
+  --ink-soft: #2c454d;
+  --teal: #1e5a5a;
+  --teal-deep: #143d3d;
+  --accent: #2a7a7a;
+  --accent-soft: #d4ebe8;
+  --cream: #f7f3eb;
+  --cream-dark: #ebe4d6;
+  --paper: #fffcf7;
+  --line: #d0c8b8;
+  --muted: #5c6b70;
+  --danger-hint: #8b5a3c;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 2px 12px rgba(26, 47, 53, 0.06);
+  --max-text: 44rem; /* ~704px */
+  --max-wide: 68rem;
+  --header-h: 3.5rem;
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", "Source Han Serif TC", "Songti TC", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 0.75rem);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--teal-deep);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+  background: rgba(255, 252, 247, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--teal-deep);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.1rem;
+}
+
+.site-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.container.narrow {
+  max-width: var(--max-text);
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--teal-deep);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.section-lead {
+  color: var(--muted);
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0 3.5rem;
+  background:
+    linear-gradient(165deg, var(--accent-soft) 0%, var(--cream) 45%, var(--cream) 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  text-transform: none;
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+.hero-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--danger-hint);
+  margin: 0 0 0.35rem;
+}
+
+.hero-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+
+.hero-identity {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.fill-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Panels & cards */
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.5rem 1.35rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+}
+
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+.panel h3,
+.goal-card h3,
+.wellbeing-card h3,
+.timeline-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin: 0 0 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--teal);
+}
+
+.prefill {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+}
+
+.prefill.muted,
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.prefill strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Editable blanks */
+.blank-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin: 0.75rem 0 0.35rem;
+  letter-spacing: 0.03em;
+}
+
+.blank-box {
+  min-height: 5.5rem;
+  padding: 0.85rem 1rem;
+  border: 1.5px dashed var(--accent);
+  border-radius: var(--radius-sm);
+  background: rgba(212, 235, 232, 0.25);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.blank-box.compact {
+  min-height: 4rem;
+}
+
+.blank-box.tall {
+  min-height: 8rem;
+}
+
+.blank-box:empty::before {
+  content: attr(data-placeholder);
+  color: var(--danger-hint);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.blank-box:focus {
+  border-style: solid;
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(42, 122, 122, 0.2);
+}
+
+/* Goals */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.goal-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.25rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.goal-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.goal-card h3 {
+  margin: 0;
+}
+
+.smart-list {
+  margin: 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.smart-list > div {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  font-size: 0.92rem;
+}
+
+.smart-list dt {
+  font-weight: 700;
+  color: var(--teal);
+  margin: 0;
+}
+
+.smart-list dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.link-box {
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--cream-dark);
+}
+
+.link-box h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--teal-deep);
+  letter-spacing: 0.04em;
+}
+
+.link-prompt {
+  margin: 0 0 0.65rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--cream-dark));
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0.25rem;
+  top: 0.45rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.timeline-body h3 {
+  margin-bottom: 0.35rem;
+}
+
+/* Wellbeing */
+.wellbeing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.wellbeing-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  box-shadow: var(--shadow);
+}
+
+.wellbeing-card h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.review-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.closing-panel .blank-box.tall {
+  margin-top: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2.5rem 0 3rem;
+  background: var(--teal-deep);
+  color: #e8f0ef;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.site-footer strong {
+  color: #fff;
+}
+
+.footer-note {
+  margin-top: 1rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wellbeing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.25rem 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .hero {
+    padding: 2.75rem 0 2.5rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .wellbeing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print */
+@media print {
+  .site-header,
+  .nav-toggle,
+  .skip-link {
+    display: none !important;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .hero,
+  .section-alt,
+  .site-footer {
+    background: #fff !important;
+    border-color: #ccc;
+  }
+
+  .site-footer {
+    color: #333;
+  }
+
+  .blank-box {
+    border: 1px solid #999;
+    background: #fafafa;
+    min-height: 3rem;
+  }
+
+  .blank-box:empty::before {
+    color: #666;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .goal-card,
+  .panel,
+  .wellbeing-card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .section {
+    padding: 1.25rem 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#hero">GECC1130</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="頁面導覽">
+        <a href="#vision">願景使命</a>
+        <a href="#goals">三大目標</a>
+        <a href="#timeline">時間線</a>
+        <a href="#wellbeing">身心社靈</a>
+        <a href="#review">檢討</a>
+        <a href="#closing">承諾</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section id="hero" class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">崇基學院 · Idea of a University · 反思習作</p>
+        <h1>我的大學路｜智慧生活與公民實踐</h1>
+        <p class="hero-name">【請填寫姓名】</p>
+        <p class="hero-meta">高年級入學 · 約兩年學程</p>
+        <p class="hero-identity">
+          大學生對我來說，是探索與展現才能的機會；
+          亦是在有限兩年裡，把專業與公民實踐接上的一段路。
+        </p>
+        <p class="fill-hint">字數目標：全文填妥後約 800–1,000 字（中文）</p>
+      </div>
+    </section>
+
+    <!-- 2. Vision & Mission -->
+    <section id="vision" class="section">
+      <div class="container narrow">
+        <h2>願景與使命</h2>
+
+        <article class="panel">
+          <h3>願景 <span class="tag">兩年後</span></h3>
+          <p class="prefill">
+            我想成為一位智慧城市規劃者，聚焦<strong>空間關係規劃</strong>、
+            <strong>公民社會與科技之間的張力</strong>（以人為本），以及
+            <strong>智慧管治</strong>（尤其跨部門協調不足）等課題。
+            我會透過研究、調查與技術創新回應這些問題，並賦權市民在
+            <strong>資訊、參與、管治</strong>三個層次共建理想城市。
+          </p>
+          <label class="blank-label" for="vision-essay">我的闡述</label>
+          <div class="blank-box" id="vision-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：為什麼這願景對你重要？智慧城市的「人」在哪裡？】"></div>
+        </article>
+
+        <article class="panel">
+          <h3>使命 <span class="tag">大學期間</span></h3>
+          <p class="prefill">我的目的是<strong>研究智慧生活創新</strong>。</p>
+          <label class="blank-label" for="mission-essay">我的闡述</label>
+          <div class="blank-box" id="mission-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：你如何理解「智慧生活創新」？它與公民賦權有何關係？】"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Three Goals -->
+    <section id="goals" class="section section-alt">
+      <div class="container">
+        <h2>三大 SMART 目標</h2>
+        <p class="section-lead">每個目標已標明 SMART 要素；「課堂連繫」請用自己的話寫入反思。</p>
+
+        <div class="goal-grid">
+          <!-- Goal 1 -->
+          <article class="goal-card" id="goal-1">
+            <header class="goal-header">
+              <span class="goal-num">目標 1</span>
+              <h3>空間規劃專業</h3>
+            </header>
+            <dl class="smart-list">
+              <div><dt>S</dt><dd>空間規劃</dd></div>
+              <div><dt>M</dt><dd>4 門相關課 + 4 個 Project</dd></div>
+              <div><dt>A / R</dt><dd>ArcGIS Pro</dd></div>
+              <div><dt>T</dt><dd>2026 年 12 月</dd></div>
+            </dl>
+            <div class="link-box">
+              <h4>課堂連繫</h4>
+              <p class="link-prompt">白耀燦｜地緣＋人情 → 讀空間不只讀圖，也要問「誰住在這裡、誰被排除」。</p>
+              <label class="blank-label visually-hidden" for="goal1-link">目標 1 課堂連繫寫作</label>
+              <div class="blank-box compact" id="goal1-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：這堂課如何改變你對空間規劃的理解？】"></div>
+            </div>
+            <label class="blank-label" for="goal1-essay">行動與反思</label>
+            <div class="blank-box compact" id="goal1-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：動力、可能障礙、具體步驟】"></div>
+          </article>
+
+          <!-- Goal 2 -->
+          <article class="goal-card" id="goal-2">
+            <header class="goal-header">
+              <span class="goal-num">目標 2</span>
+              <h3>學業成績 · First Honour</h3>
+            </header>
+            <dl class="smart-list">
+              <div><dt>S</dt><dd>First Honour</dd></div>
+              <div><dt>M</dt><dd>不缺席講課；每週至少讀 1 篇 reference</dd></div>
+              <div><dt>A / R</dt><dd>Reading Lists + 課堂</dd></div>
+              <div><dt>T</dt><dd>2026 年 12 月</dd></div>
+            </dl>
+            <div class="link-box">
+              <h4>課堂連繫</h4>
+              <p class="link-prompt">湯泳詩／黃鴻亮｜工具化 vs 求學問道；自律＋書院對話。</p>
+              <label class="blank-label visually-hidden" for="goal2-link">目標 2 課堂連繫寫作</label>
+              <div class="blank-box compact" id="goal2-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：成績目標如何與「問道／修身」並存，而非純工具化？】"></div>
+            </div>
+            <label class="blank-label" for="goal2-essay">行動與反思</label>
+            <div class="blank-box compact" id="goal2-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：每週閱讀如何成為有意識的反省？】"></div>
+          </article>
+
+          <!-- Goal 3 -->
+          <article class="goal-card" id="goal-3">
+            <header class="goal-header">
+              <span class="goal-num">目標 3</span>
+              <h3>公民賦權 · Mobility App</h3>
+            </header>
+            <dl class="smart-list">
+              <div><dt>S</dt><dd>令市民更容易使用 mobility app</dd></div>
+              <div><dt>M</dt><dd>≥30 人試用、≥15 條回饋、5 次社區對話</dd></div>
+              <div><dt>A / R</dt><dd>【請補充現有資源／能力】</dd></div>
+              <div><dt>T</dt><dd>2027 年 5 月</dd></div>
+            </dl>
+            <div class="link-box">
+              <h4>課堂連繫</h4>
+              <p class="link-prompt">譚佩玉｜先聽再做；empower 不是代勞 → 對應試用、回饋、社區對話。</p>
+              <label class="blank-label visually-hidden" for="goal3-link">目標 3 課堂連繫寫作</label>
+              <div class="blank-box compact" id="goal3-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：如何避免「代民做主」，讓市民真正進入資訊／參與／管治三層？】"></div>
+            </div>
+            <label class="blank-label" for="goal3-essay">行動與反思</label>
+            <div class="blank-box compact" id="goal3-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：對話設計、對象、預期學習】"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Timeline -->
+    <section id="timeline" class="section">
+      <div class="container narrow">
+        <h2>行動時間線</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>現在 · 起步</h3>
+              <p class="prefill muted">整理願景、選定三目標、開始每週閱讀習慣。</p>
+              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：本學期第一步】" aria-label="現在步驟"></div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>2026 年 12 月 · 中期檢查點</h3>
+              <p class="prefill muted">目標 1（空間規劃）與目標 2（First Honour）期限。</p>
+              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：到時要完成／檢視什麼】" aria-label="2026年12月步驟"></div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>2027 年 5 月 · 公民實踐節點</h3>
+              <p class="prefill muted">目標 3：mobility app 試用、回饋與社區對話。</p>
+              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：展示或總結方式】" aria-label="2027年5月步驟"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. 身心社靈 -->
+    <section id="wellbeing" class="section section-alt">
+      <div class="container">
+        <h2>身心社靈</h2>
+        <p class="section-lead">短填即可；與大學生活平衡相關。</p>
+        <div class="wellbeing-grid">
+          <article class="wellbeing-card">
+            <h3>身</h3>
+            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="身"></div>
+          </article>
+          <article class="wellbeing-card">
+            <h3>心</h3>
+            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="心"></div>
+          </article>
+          <article class="wellbeing-card">
+            <h3>社</h3>
+            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="社"></div>
+          </article>
+          <article class="wellbeing-card">
+            <h3>靈</h3>
+            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="靈"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Review -->
+    <section id="review" class="section">
+      <div class="container narrow">
+        <h2>檢討機制</h2>
+        <article class="panel">
+          <p class="prefill muted">定期評估（Evaluated）與檢討／肯定（Reviewed），讓目標保持可執行。</p>
+          <div class="review-fields">
+            <div>
+              <label class="blank-label" for="review-cycle">週期</label>
+              <div class="blank-box compact" id="review-cycle" contenteditable="true" role="textbox" data-placeholder="【例如：每兩週／每月】"></div>
+            </div>
+            <div>
+              <label class="blank-label" for="review-method">方法</label>
+              <div class="blank-box compact" id="review-method" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：對照什麼指標？如何記錄？】"></div>
+            </div>
+            <div>
+              <label class="blank-label" for="review-reward">做到時如何肯定自己</label>
+              <div class="blank-box compact" id="review-reward" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. Closing -->
+    <section id="closing" class="section section-alt">
+      <div class="container narrow">
+        <h2>結語與承諾</h2>
+        <article class="panel closing-panel">
+          <p class="link-prompt">可串起：「止於至善／親民」＋以人為本的智慧城市＋兩年把專業接上公民實踐。</p>
+          <label class="blank-label" for="closing-essay">我的承諾</label>
+          <div class="blank-box tall" id="closing-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫結語：你願意在未來兩年守住什麼？】"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container narrow">
+      <p><strong>GECC1130</strong> Idea of a University · 崇基學院 Chung Chi College</p>
+      <p>反思習作繳交提示：約 <time datetime="2026-11-02">2026-11-02</time>（請以 Blackboard／課程公布為準）</p>
+      <p class="footer-note">本頁結構與版面僅供呈現；所有反思正文均由學生本人撰寫。課程禁止以生成式 AI 代寫書面作業內容。</p>
+    </div>
+  </footer>
+
+  <script>
+(function () {
+  "use strict";
+
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.getElementById("site-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "關閉選單" : "開啟選單");
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "開啟選單");
+      });
+    });
+  }
+
+  /* Smooth scroll for browsers that need help + focus target for a11y */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener("click", function (e) {
+      var id = anchor.getAttribute("href");
+      if (!id || id === "#") return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (!target.hasAttribute("tabindex")) {
+        target.setAttribute("tabindex", "-1");
+      }
+      target.focus({ preventScroll: true });
+    });
+  });
+})();
+
+</script>
+</body>
+</html>
