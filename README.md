@@ -66,3 +66,20 @@
 - `README.md` — 本說明
 
 繳交期限提示：約 **2026-11-02**（請以 Blackboard／課程公布為準）。
+
+## 圖片（Unsplash License）
+
+本站使用 [Unsplash](https://unsplash.com/) 免費授權相片。本機 `images/` 同時有 `.jpg` 與發布用 `.svg`（內嵌 JPEG，方便上傳）。
+
+| 檔案 | 主題 | Unsplash 來源 |
+|------|------|----------------|
+| `images/hero-city` | 城市黃昏街景 | https://images.unsplash.com/photo-1449824913935-59a10b8d2000 |
+| `images/goal-spatial` | 地圖／空間規劃 | https://images.unsplash.com/photo-1524661135-423995f22d0b |
+| `images/goal-study` | 圖書館求學 | https://images.unsplash.com/photo-1521587760476-6c12a4b040da |
+| `images/goal-mobility` | 單車／流動出行 | https://images.unsplash.com/photo-1571068316344-75bc76f77890 |
+| `images/community` | 社區對話 | https://images.unsplash.com/photo-1529156069898-49953e39b3ac |
+| `images/campus` | 校園步道 | https://images.unsplash.com/photo-1541339907198-e08756dedf3f |
+
+公開預覽（commit 釘選，較不易被 CDN 舊快取影響）：
+
+`https://rawcdn.githack.com/yoy929981-sketch/gecc1130-portfolio/<commit>/index.html`
