@@ -196,7 +196,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url("images/hero-city.jpg");
+  background-image: url("images/hero-city.svg");
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
