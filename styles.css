@@ -801,3 +801,11 @@ body {
     margin-right: 0.75rem;
   }
 }
+
+.blank-box.filled {
+  border-style: solid;
+  background: #fff;
+  color: inherit;
+  min-height: auto;
+}
+.blank-box.filled p { margin: 0; line-height: 1.75; }
