@@ -266,6 +266,255 @@ body {
   margin: 0;
 }
 
+
+/* Vision essay — personal expression (not worksheet) */
+.eyebrow-dark {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.vision-header {
+  max-width: var(--max-text);
+  margin: 0 auto 2rem;
+  padding: 0 0.15rem;
+}
+
+.vision-header h2 {
+  margin-bottom: 0;
+}
+
+.vision-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
+  gap: 2.25rem 2.5rem;
+  align-items: start;
+}
+
+.vision-prose {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.vision-prose .lead-desire {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+}
+
+.vision-prose .lead-desire strong {
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+
+.pull-quote {
+  margin: 1.75rem 0 1.25rem;
+  padding: 1.25rem 1.35rem;
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(212, 235, 232, 0.55), transparent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.pull-quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--teal-deep);
+  margin: 0;
+}
+
+.vision-prose .reflection {
+  margin: 0 0 1.25rem;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.vision-prose .mission-beat {
+  margin: 1.75rem 0 1rem;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+}
+
+.vision-prose .mission-beat strong {
+  font-weight: 700;
+}
+
+.vision-inline-figure {
+  margin: 1.25rem 0 1.5rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--cream-dark);
+}
+
+.vision-inline-figure img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.vision-inline-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.65rem 0.9rem 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.book-figure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.15rem;
+  margin: 1.75rem 0 0.25rem;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.book-figure img {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(26, 47, 53, 0.18);
+  background: #fff;
+}
+
+.book-figure figcaption {
+  flex: 1;
+  min-width: 12rem;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.book-figure .credit {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.question-gallery {
+  position: sticky;
+  top: calc(var(--header-h) + 0.75rem);
+}
+
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal-deep);
+  margin: 0 0 0.35rem;
+}
+
+.gallery-lead {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.q-card {
+  margin: 0 0 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.q-card:last-child {
+  margin-bottom: 0;
+}
+
+.q-card img {
+  display: block;
+  width: 100%;
+  height: 148px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.q-card figcaption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.85rem 1rem 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--teal-deep);
+}
+
+.q-card figcaption strong {
+  font-weight: 700;
+}
+
+.q-mark {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .vision-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .question-gallery {
+    position: static;
+  }
+
+  .q-card img {
+    height: 180px;
+  }
+}
+
+@media print {
+  .vision-inline-figure,
+  .question-gallery,
+  .book-figure img {
+    display: none !important;
+  }
+
+  .book-figure {
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+}
+
 /* Goal card images */
 .goal-media {
   margin: 0;
