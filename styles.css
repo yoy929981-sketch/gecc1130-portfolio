@@ -1058,3 +1058,34 @@ body {
   min-height: auto;
 }
 .blank-box.filled p { margin: 0; line-height: 1.75; }
+
+
+/* Vision flow: desire → questions diagram → argument */
+.vision-flow { display: flex; flex-direction: column; gap: 2.5rem; max-width: 1100px; margin: 0 auto; }
+.vision-flow .vision-prose { max-width: 720px; margin: 0 auto; }
+.question-gallery-row { width: 100%; }
+.question-gallery-row .q-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 800px) {
+  .question-gallery-row .q-grid { grid-template-columns: 1fr; }
+}
+.vision-argument { max-width: 900px; margin: 0 auto; }
+.argument-title {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: var(--ink, #1a2f2a);
+}
+.argument-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.75rem;
+  align-items: start;
+}
+@media (max-width: 700px) {
+  .argument-layout { grid-template-columns: 1fr; }
+  .argument-layout .book-figure { justify-self: center; }
+}
