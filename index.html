@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="GECC1130 反思習作｜我的大學路：智慧生活與公民實踐" />
+  <meta name="theme-color" content="#143d3d" />
+  <meta property="og:title" content="我的大學路｜智慧生活與公民實踐 — GECC1130" />
+  <meta property="og:description" content="崇基學院 GECC1130 反思習作作品集：願景、SMART 目標、時間線與身心社靈。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_HK" />
   <title>我的大學路｜智慧生活與公民實踐 — GECC1130</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +17,22 @@
 </head>
 <body>
   <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <div class="draft-bar" role="region" aria-label="草稿工具列">
+    <div class="draft-bar-inner">
+      <div class="draft-progress" aria-live="polite">
+        <span class="draft-progress-label">填寫進度</span>
+        <div class="draft-progress-track" aria-hidden="true"><span class="draft-progress-fill" id="draft-progress-fill"></span></div>
+        <span class="draft-progress-text" id="draft-progress-text">0 / 0</span>
+      </div>
+      <p class="draft-status" id="draft-status">草稿會自動保存在本機瀏覽器</p>
+      <div class="draft-actions">
+        <button type="button" class="draft-btn" id="btn-copy-draft">複製草稿文字</button>
+        <button type="button" class="draft-btn" id="btn-print">列印／存 PDF</button>
+        <button type="button" class="draft-btn draft-btn-danger" id="btn-clear-draft">清除本機草稿</button>
+      </div>
+    </div>
+  </div>
 
   <header class="site-header">
     <div class="header-inner">
@@ -38,13 +59,14 @@
       <div class="container narrow hero-content">
         <p class="eyebrow">崇基學院 · Idea of a University · 反思習作</p>
         <h1>我的大學路｜智慧生活與公民實踐</h1>
-        <p class="hero-name">【請填寫姓名】</p>
+        <p class="hero-name" id="student-name" contenteditable="true" role="textbox" data-placeholder="【請填寫姓名】" aria-label="姓名">【請填寫姓名】</p>
         <p class="hero-meta">高年級入學 · 約兩年學程</p>
         <p class="hero-identity">
           大學生對我來說，是探索與展現才能的機會；
           亦是在有限兩年裡，把專業與公民實踐接上的一段路。
         </p>
         <p class="fill-hint">字數目標：全文填妥後約 800–1,000 字（中文）</p>
+        <p class="deadline-chip">繳交提示：約 <time datetime="2026-11-02">2026-11-02 23:59</time>（香港時間；以 Blackboard 為準）</p>
       </div>
     </section>
 
@@ -243,7 +265,7 @@
             <div class="timeline-body">
               <h3>現在 · 起步</h3>
               <p class="prefill muted">整理願景、選定三目標、開始每週閱讀習慣。</p>
-              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：本學期第一步】" aria-label="現在步驟"></div>
+              <div class="blank-box compact" id="tl-now" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：本學期第一步】" aria-label="現在步驟"></div>
             </div>
           </li>
           <li class="timeline-item">
@@ -251,7 +273,7 @@
             <div class="timeline-body">
               <h3>2026 年 12 月 · 中期檢查點</h3>
               <p class="prefill muted">目標 1（空間規劃）與目標 2（First Honour）期限。</p>
-              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：到時要完成／檢視什麼】" aria-label="2026年12月步驟"></div>
+              <div class="blank-box compact" id="tl-2026-12" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：到時要完成／檢視什麼】" aria-label="2026年12月步驟"></div>
             </div>
           </li>
           <li class="timeline-item">
@@ -259,7 +281,7 @@
             <div class="timeline-body">
               <h3>2027 年 5 月 · 公民實踐節點</h3>
               <p class="prefill muted">目標 3：mobility app 試用、回饋與社區對話。</p>
-              <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：展示或總結方式】" aria-label="2027年5月步驟"></div>
+              <div class="blank-box compact" id="tl-2027-05" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：展示或總結方式】" aria-label="2027年5月步驟"></div>
             </div>
           </li>
         </ol>
@@ -274,19 +296,19 @@
         <div class="wellbeing-grid">
           <article class="wellbeing-card">
             <h3>身</h3>
-            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="身"></div>
+            <div class="blank-box compact" id="wb-body" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="身"></div>
           </article>
           <article class="wellbeing-card">
             <h3>心</h3>
-            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="心"></div>
+            <div class="blank-box compact" id="wb-mind" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="心"></div>
           </article>
           <article class="wellbeing-card">
             <h3>社</h3>
-            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="社"></div>
+            <div class="blank-box compact" id="wb-social" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="社"></div>
           </article>
           <article class="wellbeing-card">
             <h3>靈</h3>
-            <div class="blank-box compact" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="靈"></div>
+            <div class="blank-box compact" id="wb-spirit" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】" aria-label="靈"></div>
           </article>
         </div>
       </div>
