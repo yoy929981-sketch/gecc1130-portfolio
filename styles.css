@@ -1092,6 +1092,164 @@ body {
 }
 
 
+
+/* === core goal essay (2026-11) === */
+.core-goal-section .vision-header {
+  margin-bottom: 1.25rem;
+}
+
+.core-goal-figure {
+  margin: 0 auto 1.5rem;
+  max-width: 920px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.core-goal-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 22rem;
+  object-fit: cover;
+}
+
+.core-goal-figure figcaption {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.smart-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 auto 2rem;
+  max-width: 920px;
+  padding: 1rem 1.1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.smart-strip > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.smart-strip dt {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.smart-strip dd {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.core-essay {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.35rem 1.75rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.core-essay-title {
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.35;
+  margin: 0 0 1.15rem;
+  color: var(--teal-deep);
+}
+
+.core-essay .lead-desire,
+.core-essay .reflection,
+.core-essay .mission-beat {
+  margin: 0 0 1rem;
+}
+
+.core-essay .mission-beat {
+  margin-bottom: 0;
+}
+
+.filled-static {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.filled-static.muted,
+.filled-static.closing-prose {
+  color: var(--ink-soft);
+}
+
+.closing-prose {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.review-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--teal-deep);
+}
+
+.review-filled > div {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.review-filled > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.review-filled > div:first-child {
+  padding-top: 0;
+}
+
+@media (max-width: 960px) {
+  .smart-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .smart-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .core-goal-figure {
+    break-inside: avoid;
+  }
+  .core-essay {
+    box-shadow: none;
+    border-color: #ccc;
+  }
+}
+
 /* === draft bar & polish (2026-10) === */
 .draft-bar {
   position: sticky;

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="GECC1130 反思習作｜我的大學路：智慧生活與公民實踐" />
+  <meta name="description" content="GECC1130 反思習作｜以人情為本的空間規劃：我的大學核心目標" />
   <meta name="theme-color" content="#143d3d" />
   <meta property="og:title" content="我的大學路｜智慧生活與公民實踐 — GECC1130" />
-  <meta property="og:description" content="崇基學院 GECC1130 反思習作作品集：願景、SMART 目標、時間線與身心社靈。" />
+  <meta property="og:description" content="崇基學院 GECC1130 反思習作：以人情為本的空間規劃核心目標、願景、時間線與檢討。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_HK" />
   <title>我的大學路｜智慧生活與公民實踐 — GECC1130</title>
@@ -18,18 +18,18 @@
 <body>
   <a class="skip-link" href="#main">跳至主要內容</a>
 
-  <div class="draft-bar" role="region" aria-label="草稿工具列">
+  <div class="draft-bar" role="region" aria-label="頁面工具列">
     <div class="draft-bar-inner">
-      <div class="draft-progress" aria-live="polite">
-        <span class="draft-progress-label">填寫進度</span>
-        <div class="draft-progress-track" aria-hidden="true"><span class="draft-progress-fill" id="draft-progress-fill"></span></div>
-        <span class="draft-progress-text" id="draft-progress-text">0 / 0</span>
-      </div>
-      <p class="draft-status" id="draft-status">草稿會自動保存在本機瀏覽器</p>
+      <p class="draft-status" id="draft-status">核心目標正文已發布；姓名與身心社靈仍可本機暫存</p>
       <div class="draft-actions">
-        <button type="button" class="draft-btn" id="btn-copy-draft">複製草稿文字</button>
         <button type="button" class="draft-btn" id="btn-print">列印／存 PDF</button>
+        <button type="button" class="draft-btn" id="btn-copy-draft">複製可編輯欄位</button>
         <button type="button" class="draft-btn draft-btn-danger" id="btn-clear-draft">清除本機草稿</button>
+      </div>
+      <!-- kept for script.js compatibility -->
+      <div class="draft-progress visually-hidden" aria-hidden="true">
+        <span class="draft-progress-fill" id="draft-progress-fill"></span>
+        <span id="draft-progress-text"></span>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="頁面導覽">
         <a href="#vision">我的視野</a>
-        <a href="#goals">三大目標</a>
+        <a href="#goals">核心目標</a>
         <a href="#timeline">時間線</a>
         <a href="#wellbeing">身心社靈</a>
         <a href="#review">檢討</a>
@@ -65,7 +65,7 @@
           大學生對我來說，是探索與展現才能的機會；
           亦是在有限兩年裡，把專業與公民實踐接上的一段路。
         </p>
-        <p class="fill-hint">字數目標：全文填妥後約 800–1,000 字（中文）</p>
+        <p class="fill-hint">核心目標正文約 800–1,000 字，已見下方「核心目標」一節；姓名與身心社靈可另補。</p>
         <p class="deadline-chip">繳交提示：約 <time datetime="2026-11-02">2026-11-02 23:59</time>（香港時間；以 Blackboard 為準）</p>
       </div>
     </section>
@@ -156,88 +156,34 @@
       </div>
     </section>
 
-    <!-- 3. Three Goals -->
-    <section id="goals" class="section section-alt">
+    <!-- 3. Core Goal -->
+    <section id="goals" class="section section-alt core-goal-section">
       <div class="container">
-        <h2>三大 SMART 目標</h2>
-        <p class="section-lead">每個目標已標明 SMART 要素；「課堂連繫」請用自己的話寫入反思。</p>
+        <header class="vision-header">
+          <p class="eyebrow-dark">大學核心目標 · SMART 摘要</p>
+          <h2>核心目標</h2>
+        </header>
 
-        <div class="goal-grid">
-          <!-- Goal 1 -->
-          <article class="goal-card" id="goal-1">
-            <figure class="goal-media">
-              <img src="images/goal-spatial.svg" alt="地圖與空間規劃示意：世界地圖俯視視角" width="1200" height="797" loading="lazy" decoding="async" />
-            </figure>
-            <header class="goal-header">
-              <span class="goal-num">目標 1</span>
-              <h3>空間規劃專業</h3>
-            </header>
-            <dl class="smart-list">
-              <div><dt>S</dt><dd>空間規劃</dd></div>
-              <div><dt>M</dt><dd>4 門相關課 + 4 個 Project</dd></div>
-              <div><dt>A / R</dt><dd>ArcGIS Pro</dd></div>
-              <div><dt>T</dt><dd>2026 年 12 月</dd></div>
-            </dl>
-            <div class="link-box">
-              <h4>課堂連繫</h4>
-              <p class="link-prompt">白耀燦｜地緣＋人情 → 讀空間不只讀圖，也要問「誰住在這裡、誰被排除」。</p>
-              <label class="blank-label visually-hidden" for="goal1-link">目標 1 課堂連繫寫作</label>
-              <div class="blank-box compact" id="goal1-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：這堂課如何改變你對空間規劃的理解？】"></div>
-            </div>
-            <label class="blank-label" for="goal1-essay">行動與反思</label>
-            <div class="blank-box compact" id="goal1-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：動力、可能障礙、具體步驟】"></div>
-          </article>
+        <figure class="core-goal-figure">
+          <img src="images/goal-spatial.svg" alt="地圖與空間規劃示意：世界地圖俯視視角" width="1200" height="797" loading="lazy" decoding="async" />
+          <figcaption>讀地圖也要讀人情：技術服務於看不見的關係</figcaption>
+        </figure>
 
-          <!-- Goal 2 -->
-          <article class="goal-card" id="goal-2">
-            <figure class="goal-media">
-              <img src="images/goal-study.svg" alt="圖書館書架與閱讀空間，象徵求學與自律" width="1200" height="800" loading="lazy" decoding="async" />
-            </figure>
-            <header class="goal-header">
-              <span class="goal-num">目標 2</span>
-              <h3>學業成績 · First Honour</h3>
-            </header>
-            <dl class="smart-list">
-              <div><dt>S</dt><dd>First Honour</dd></div>
-              <div><dt>M</dt><dd>不缺席講課；每週至少讀 1 篇 reference</dd></div>
-              <div><dt>A / R</dt><dd>Reading Lists + 課堂</dd></div>
-              <div><dt>T</dt><dd>2026 年 12 月</dd></div>
-            </dl>
-            <div class="link-box">
-              <h4>課堂連繫</h4>
-              <p class="link-prompt">湯泳詩／黃鴻亮｜工具化 vs 求學問道；自律＋書院對話。</p>
-              <label class="blank-label visually-hidden" for="goal2-link">目標 2 課堂連繫寫作</label>
-              <div class="blank-box compact" id="goal2-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：成績目標如何與「問道／修身」並存，而非純工具化？】"></div>
-            </div>
-            <label class="blank-label" for="goal2-essay">行動與反思</label>
-            <div class="blank-box compact" id="goal2-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：每週閱讀如何成為有意識的反省？】"></div>
-          </article>
+        <dl class="smart-strip" aria-label="SMART 摘要">
+          <div><dt>S</dt><dd>以人情為本的空間規劃</dd></div>
+          <div><dt>M</dt><dd>4 課 + 4 專題 + 每專題人情觀察</dd></div>
+          <div><dt>A / R</dt><dd>ArcGIS Pro＋地理系工作坊</dd></div>
+          <div><dt>T</dt><dd>2027 年 5 月｜首次檢討 2026 年 11 月中旬</dd></div>
+        </dl>
 
-          <!-- Goal 3 -->
-          <article class="goal-card" id="goal-3">
-            <figure class="goal-media">
-              <img src="images/goal-mobility.svg" alt="街頭單車與流動出行，象徵 mobility 與市民移動" width="1200" height="800" loading="lazy" decoding="async" />
-            </figure>
-            <header class="goal-header">
-              <span class="goal-num">目標 3</span>
-              <h3>公民賦權 · Mobility App</h3>
-            </header>
-            <dl class="smart-list">
-              <div><dt>S</dt><dd>令市民更容易使用 mobility app</dd></div>
-              <div><dt>M</dt><dd>≥30 人試用、≥15 條回饋、5 次社區對話</dd></div>
-              <div><dt>A / R</dt><dd>【請補充現有資源／能力】</dd></div>
-              <div><dt>T</dt><dd>2027 年 5 月</dd></div>
-            </dl>
-            <div class="link-box">
-              <h4>課堂連繫</h4>
-              <p class="link-prompt">譚佩玉｜先聽再做；empower 不是代勞 → 對應試用、回饋、社區對話。</p>
-              <label class="blank-label visually-hidden" for="goal3-link">目標 3 課堂連繫寫作</label>
-              <div class="blank-box compact" id="goal3-link" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：如何避免「代民做主」，讓市民真正進入資訊／參與／管治三層？】"></div>
-            </div>
-            <label class="blank-label" for="goal3-essay">行動與反思</label>
-            <div class="blank-box compact" id="goal3-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：對話設計、對象、預期學習】"></div>
-          </article>
-        </div>
+        <article class="core-essay vision-prose" id="core-goal">
+          <h2 class="core-essay-title">以人情為本的空間規劃：我的大學核心目標</h2>
+          <p class="lead-desire">對我而言，大學賦權我成為一位以人為本的智慧城市規劃者，讓科技對準弱勢群體的基本需要，做到可負擔、可分享的智慧生活。接下來，我把焦點放在建立真正讀懂空間與人情的規劃能力，讓專業知識與公民責任實踐於社會之中。</p>
+          <p class="reflection">至2027年5月，我計劃完成四門空間相關課程及四個專題，並掌握ArcGIS Pro的基本操作，同時確保每一個專題都包含對「誰住在空間裡」的具體觀察與分析。白耀燦校友在「崇基地緣與人情」中提及，崇基集合了十三間內地基督大學的校徽。這些校徽不只是建築上的符號，而是不同歷史、信仰與人群在同一片土地上相遇的痕跡。這提醒我，空間規劃若只停留在座標、圖層與演算法，便容易把人簡化成數據點。讀地圖也要讀人情：誰被排除在規劃之外？誰的日常流動被忽略？技術必須服務於這些看不見的關係，而不是取代它們。</p>
+          <p class="reflection">具體行動分三步。第一，本學期選修兩門空間分析課，每週練習GIS約三小時；田野則採取鬆散節奏——在校園通勤與停留中觀察不同的人、時、地、物，讓日常流動成為靈感來源，而非打卡式固定時段。第二，在2026年中完成兩個專題，其中至少一個結合輕度公屋的流動研究：以步行量度由屋邨至巴士站或港鐵站的距離，把自己放進居民必要的通勤路徑，先經驗再訪談，才能問得更深、調查才更貼近真實。第三，將專題成果在書院或課堂分享，主動尋求同儕與導師回饋，檢查自己是否真的「看見人」。</p>
+          <p class="reflection">主要障礙是技術門檻與時間壓力，容易只顧操作軟件而忽略人情。對策是參加地理系工作坊補足技術，並在每次練習後寫下「這個地圖還缺了誰」。同時，每兩週以短反思（日記或與友人對談）檢討進度，對照「是否仍以人為本」，而不是只看專題是否完成。</p>
+          <p class="mission-beat">這個目標並非孤立。它呼應黃鴻亮教授講座中從大學站走到崇基路的日常流動——規劃必須從真實的移動開始。它也為日後的公民賦權打下基礎：只有先讀懂空間裡的人，才有資格協助市民自我賦權，而非替他們設計好一切。兩年後，我希望自己不只掌握工具，更能以崇基所集合的多元歷史為鏡，持續問：這張地圖，是否讓更多人被看見、被尊重。第一次檢討訂於2026年11月中旬，我將按此執行並調整。</p>
+        </article>
       </div>
     </section>
 
@@ -246,7 +192,7 @@
       <div class="container">
         <figure class="visual-strip">
           <img src="images/community.svg" alt="一群人圍坐交談，象徵社區對話與公民賦權" width="1200" height="675" loading="lazy" decoding="async" />
-          <figcaption>服務學習與公民賦權：先聽再做，empower 不是代勞（對應譚佩玉課堂方向）</figcaption>
+          <figcaption>公民賦權的基礎：先讀懂空間裡的人，才有資格協助自我賦權，而非替人設計好一切</figcaption>
         </figure>
       </div>
     </section>
@@ -257,31 +203,35 @@
         <h2>行動時間線</h2>
         <figure class="inline-figure">
           <img src="images/campus.svg" alt="大學校園步道與建築，象徵大學路上的成長節點" width="1200" height="800" loading="lazy" decoding="async" />
-          <figcaption>校園路上的節點：起步 → 中期檢查 → 公民實踐</figcaption>
+          <figcaption>校園路上的節點：起步 → 首次檢討 → 專題（含輕度公屋）→ 2027 年 5 月完成</figcaption>
         </figure>
         <ol class="timeline">
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-body">
               <h3>現在 · 起步</h3>
-              <p class="prefill muted">整理願景、選定三目標、開始每週閱讀習慣。</p>
-              <div class="blank-box compact" id="tl-now" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：本學期第一步】" aria-label="現在步驟"></div>
+              <p class="filled-static">選修兩門空間分析課；每週練習 GIS 約三小時；以校園通勤與停留作鬆散田野，觀察不同的人、時、地、物。</p>
             </div>
           </li>
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-body">
-              <h3>2026 年 12 月 · 中期檢查點</h3>
-              <p class="prefill muted">目標 1（空間規劃）與目標 2（First Honour）期限。</p>
-              <div class="blank-box compact" id="tl-2026-12" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：到時要完成／檢視什麼】" aria-label="2026年12月步驟"></div>
+              <h3>2026 年 11 月中旬 · 首次檢討</h3>
+              <p class="filled-static">每兩週短反思（日記或友人對談），對照「是否仍以人為本」與「這個地圖還缺了誰」；首次正式檢討並調整行動。</p>
             </div>
           </li>
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-body">
-              <h3>2027 年 5 月 · 公民實踐節點</h3>
-              <p class="prefill muted">目標 3：mobility app 試用、回饋與社區對話。</p>
-              <div class="blank-box compact" id="tl-2027-05" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：展示或總結方式】" aria-label="2027年5月步驟"></div>
+              <h3>2026 年中 · 專題節點</h3>
+              <p class="filled-static">完成兩個專題；至少一個結合輕度公屋流動研究——步行量度屋邨至巴士站／港鐵站距離，先經驗再訪談；並於書院或課堂分享求回饋。</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>2027 年 5 月 · 核心目標完成點</h3>
+              <p class="filled-static">完成四門空間相關課程及四個專題，掌握 ArcGIS Pro 基本操作；每個專題皆含「誰住在空間裡」的觀察與分析。</p>
             </div>
           </li>
         </ol>
@@ -320,18 +270,18 @@
         <h2>檢討機制</h2>
         <article class="panel">
           <p class="prefill muted">定期評估（Evaluated）與檢討／肯定（Reviewed），讓目標保持可執行。</p>
-          <div class="review-fields">
+          <div class="review-fields review-filled">
             <div>
-              <label class="blank-label" for="review-cycle">週期</label>
-              <div class="blank-box compact" id="review-cycle" contenteditable="true" role="textbox" data-placeholder="【例如：每兩週／每月】"></div>
+              <h3 class="review-label">週期</h3>
+              <p class="filled-static">每兩週</p>
             </div>
             <div>
-              <label class="blank-label" for="review-method">方法</label>
-              <div class="blank-box compact" id="review-method" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫：對照什麼指標？如何記錄？】"></div>
+              <h3 class="review-label">方法</h3>
+              <p class="filled-static">日記或友人對談；對照「是否仍以人為本」／「這個地圖還缺了誰」。首次檢討：2026 年 11 月中旬。</p>
             </div>
             <div>
-              <label class="blank-label" for="review-reward">做到時如何肯定自己</label>
-              <div class="blank-box compact" id="review-reward" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫】"></div>
+              <h3 class="review-label">做到時如何肯定自己</h3>
+              <p class="filled-static muted">在書院或課堂分享專題成果，並收下同儕與導師回饋——確認自己真的「看見人」。</p>
             </div>
           </div>
         </article>
@@ -343,9 +293,8 @@
       <div class="container narrow">
         <h2>結語與承諾</h2>
         <article class="panel closing-panel">
-          <p class="link-prompt">可串起：「止於至善／親民」＋以人為本的智慧城市＋兩年把專業接上公民實踐。</p>
-          <label class="blank-label" for="closing-essay">我的承諾</label>
-          <div class="blank-box tall" id="closing-essay" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="【請在此填寫結語：你願意在未來兩年守住什麼？】"></div>
+          <h3 class="visually-hidden">我的承諾</h3>
+          <p class="filled-static closing-prose">兩年後，我希望自己不只掌握工具，更能以崇基所集合的多元歷史為鏡，持續問：這張地圖，是否讓更多人被看見、被尊重。第一次檢討訂於2026年11月中旬，我將按此執行並調整。</p>
         </article>
       </div>
     </section>
@@ -356,7 +305,7 @@
       <p><strong>GECC1130</strong> Idea of a University · 崇基學院 Chung Chi College</p>
       <p>反思習作繳交提示：約 <time datetime="2026-11-02">2026-11-02</time>（請以 Blackboard／課程公布為準）</p>
       <p class="footer-credits">圖片來源：<a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank">Unsplash</a>、<a href="https://www.pexels.com/" rel="noopener noreferrer" target="_blank">Pexels</a>（免費授權）。本頁相片包括：城市街景、地圖、圖書館、單車、社區對話、校園、智能家居、太陽能、無障礙／輪椅、街頭監控等。《我們共同的未來》書封來源：<a href="https://www.appropedia.org/File:OurCommonFutureBookCover.png" rel="noopener noreferrer" target="_blank">Appropedia</a>（教育用途展示）。</p>
-      <p class="footer-note">本頁結構與版面僅供呈現；所有反思正文均由學生本人撰寫。課程禁止以生成式 AI 代寫書面作業內容。</p>
+      <p class="footer-note">本頁呈現大學核心目標與相關反思結構；正文已按課程允許方式完成並發布。繳交以 Blackboard／課程公布為準。</p>
     </div>
   </footer>
 
